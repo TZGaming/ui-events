@@ -4,6 +4,7 @@
 // Stap 1: link variabelen
 let designLink = document.querySelector('a[href="#design"]')
 let frontendLink = document.querySelector('a[href="#frontend"]')
+let andLink = document.querySelector('a[href="#and"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -28,6 +29,15 @@ frontendLink.addEventListener('click', scaleHandler)
 // Scale functie
 function scaleHandler() {
     frontendLink.classList.toggle('scale')
+}
+
+
+// & animatie click event
+andLink.addEventListener('click', transformHandler)
+
+// Scale functie
+function transformHandler() {
+    andLink.classList.toggle('transform')
 }
 
 // Ga zelf verder met de overige elementen, aan de hand van de instructies

@@ -101,4 +101,22 @@ a[href="#design"] {
   }
 }
 
+.transform {
+  animation-name: transform;
+  animation-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes transform {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /* Hieronder komen jouw animaties en stijlen */
