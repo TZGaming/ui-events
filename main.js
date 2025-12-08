@@ -7,6 +7,7 @@ let frontendLink = document.querySelector('a[href="#frontend"]')
 let andLink = document.querySelector('a[href="#and"]')
 let developmentLink = document.querySelector('a[href="#development"]')
 let sprintLink = document.querySelector('a[href="#sprint-5"]')
+let fixLink = document.querySelector('a[href="#fix"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -58,4 +59,16 @@ sprintLink.addEventListener('click', focusHandler)
 // Focus functie
 function focusHandler() {
     sprintLink.classList.toggle('focus')
+}
+
+
+// Select het element in de HTML
+const fix = document.getElementById("fix");
+
+// Fix animatie click event
+fixLink.addEventListener('mouseover', textchangeHandler)
+
+// Text content functie
+function textchangeHandler() {
+    document.getElementById("fix").textContent = "Wat?";
 }
