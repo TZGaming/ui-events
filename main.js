@@ -1,8 +1,9 @@
 /* De eerste interactie is al voor jullie uitgewerkt
    Als je op het 2e linkje klikt (Design), springt deze omhoog */
 
-// Stap 1: selecteer het Design linkje, en sla deze op in een variabele
+// Stap 1: link variabelen
 let designLink = document.querySelector('a[href="#design"]')
+let frontendLink = document.querySelector('a[href="#frontend"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -21,6 +22,13 @@ designLink.addEventListener('animationend', jumpHandler)
 
 
 
+// Frontend animatie click event
+frontendLink.addEventListener('click', scaleHandler)
+
+// Scale functie
+function scaleHandler() {
+    frontendLink.classList.toggle('scale')
+}
 
 // Ga zelf verder met de overige elementen, aan de hand van de instructies
 // Maak bijvoorbeeld een scale animatie als je op de Frontend link klikt
