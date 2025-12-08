@@ -82,6 +82,8 @@ a[href="#design"] {
   }
 }
 
+/* Hieronder komen jouw animaties en stijlen */
+
 .scale {
   animation-name: scale;
   animation-timing-function: ease;
@@ -162,4 +164,28 @@ a[href="#design"] {
     transform: translateX(0px);
   }
 }
-/* Hieronder komen jouw animaties en stijlen */
+
+.focus:focus {
+  animation-name: focus;
+  animation-timing-function: linear;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes focus {
+  0% {
+    color: white;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: blue;
+  }
+  100% {
+    color: white;
+  }
+}

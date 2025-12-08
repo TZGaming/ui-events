@@ -6,6 +6,7 @@ let designLink = document.querySelector('a[href="#design"]')
 let frontendLink = document.querySelector('a[href="#frontend"]')
 let andLink = document.querySelector('a[href="#and"]')
 let developmentLink = document.querySelector('a[href="#development"]')
+let sprintLink = document.querySelector('a[href="#sprint-5"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -42,7 +43,7 @@ function transformHandler() {
 }
 
 
-// & animatie click event
+// Development animatie click event
 developmentLink.addEventListener('click', shakeHandler)
 
 // Shake functie
@@ -50,14 +51,11 @@ function shakeHandler() {
     developmentLink.classList.toggle('shake')
 }
 
-// Ga zelf verder met de overige elementen, aan de hand van de instructies
-// Maak bijvoorbeeld een scale animatie als je op de Frontend link klikt
 
-// Stap 1: querySelector
-// let scaleLink = document.querySelector...
+// Sprint 5 animatie click event
+sprintLink.addEventListener('click', focusHandler)
 
-// Stap 2: addEventListener
-// scaleLink.addEventListener...
-
-// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-// scaleLink.classList.toggle...
+// Focus functie
+function focusHandler() {
+    sprintLink.classList.toggle('focus')
+}
