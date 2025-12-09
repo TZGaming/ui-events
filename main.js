@@ -10,6 +10,7 @@ let sprintLink = document.querySelector('a[href="#sprint-5"]')
 let fixLink = document.querySelector('a[href="#fix"]')
 let theLink = document.querySelector('a[href="#the"]')
 let flowLink = document.querySelector('a[href="#flow"]')
+let userLink = document.querySelector('a[href="#user"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -86,10 +87,11 @@ function rotateHandler() {
 }
 
 
-
+// Event listener voor de muis direction
 flowLink.addEventListener("mouseenter", rotateUpHandler);
 flowLink.addEventListener("mouseleave", rotateDownHandler);
 
+// Functie voor de upwards flip
 function rotateUpHandler() {
     flowLink.classList.add("rotateUp");
         setTimeout(() => {
@@ -97,9 +99,43 @@ function rotateUpHandler() {
     }, 500);
 }
 
+// Functie voor de downwards flip
 function rotateDownHandler() {
     flowLink.classList.add("rotateDown");
         setTimeout(() => {
         flowLink.classList.remove("rotateDown");
     }, 500);
 }
+
+
+
+// Color key functie
+document.addEventListener('keyup', keyColorHandler);
+
+function keyColorHandler(event) {
+    const key = event.key;
+
+    const colors = {
+        a: 'red',
+        b: 'blue',
+        c: 'green',
+        d: 'orange',
+        e: 'purple'
+    };
+
+    if (colors[key]) {
+        userLink.style.color = colors[key];
+    }
+}
+
+
+// Ballon
+const interfaceLink = document.querySelector('#interface');
+
+document.addEventListener('keydown', () => {
+    interfaceLink.classList.add('balloon-big');
+});
+
+document.addEventListener('keyup', () => {
+    interfaceLink.classList.remove('balloon-big');
+});

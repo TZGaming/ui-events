@@ -242,3 +242,11 @@ a[href="#design"] {
     transform: rotateX(-360deg);
   }
 }
+
+#interface {
+    transition: transform 10s ease-out;
+}
+
+.balloon-big {
+    transform: scale(20);
+}
