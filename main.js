@@ -139,3 +139,25 @@ document.addEventListener('keydown', () => {
 document.addEventListener('keyup', () => {
     interfaceLink.classList.remove('balloon-big');
 });
+
+
+
+const eventsLink = document.querySelector('a[href="#events"]');
+
+let fontSize = 32; // beginwaarde
+
+eventsLink.addEventListener("wheel", (event) => {
+
+  if (event.deltaY < 0) {
+    // scroll omhoog → vergroten
+    fontSize += 1;
+  } else {
+    // scroll omlaag → verkleinen
+    fontSize -= 1;
+  }
+
+  // Text kan niet te klein worden
+  fontSize = Math.max(6, fontSize);
+
+  eventsLink.style.fontSize = fontSize + "px";
+});
