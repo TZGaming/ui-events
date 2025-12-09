@@ -250,3 +250,8 @@ a[href="#design"] {
 .balloon-big {
     transform: scale(20);
 }
+
+#interaction {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 0, 0, 0.462), #7ce7c9);
+    transition: background 0.05s ease;
+}

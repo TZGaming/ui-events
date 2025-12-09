@@ -161,3 +161,17 @@ eventsLink.addEventListener("wheel", (event) => {
 
   eventsLink.style.fontSize = fontSize + "px";
 });
+
+
+
+const interactionLink = document.getElementById('interaction');
+
+// Luister naar muisbewegingen
+interactionLink.addEventListener('mousemove', (event) => {
+    const x = event.offsetX;
+    const y = event.offsetY;
+
+    // Radial gradient volgt muis
+    interactionLink.style.setProperty('--x', `${x}px`);
+    interactionLink.style.setProperty('--y', `${y}px`);
+});
