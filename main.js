@@ -9,6 +9,7 @@ let developmentLink = document.querySelector('a[href="#development"]')
 let sprintLink = document.querySelector('a[href="#sprint-5"]')
 let fixLink = document.querySelector('a[href="#fix"]')
 let theLink = document.querySelector('a[href="#the"]')
+let flowLink = document.querySelector('a[href="#flow"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -82,4 +83,23 @@ theLink.addEventListener('mouseout', rotateHandler)
 // Rotatie animatie functie
 function rotateHandler() {
     theLink.classList.toggle('rotate')
+}
+
+
+
+flowLink.addEventListener("mouseenter", rotateUpHandler);
+flowLink.addEventListener("mouseleave", rotateDownHandler);
+
+function rotateUpHandler() {
+    flowLink.classList.add("rotateUp");
+        setTimeout(() => {
+        flowLink.classList.remove("rotateUp");
+    }, 500);
+}
+
+function rotateDownHandler() {
+    flowLink.classList.add("rotateDown");
+        setTimeout(() => {
+        flowLink.classList.remove("rotateDown");
+    }, 500);
 }
