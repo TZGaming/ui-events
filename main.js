@@ -8,6 +8,7 @@ let andLink = document.querySelector('a[href="#and"]')
 let developmentLink = document.querySelector('a[href="#development"]')
 let sprintLink = document.querySelector('a[href="#sprint-5"]')
 let fixLink = document.querySelector('a[href="#fix"]')
+let theLink = document.querySelector('a[href="#the"]')
 
 // Stap 2: voeg de (click) event listener toe aan de link, met een callback functie
 // In dit geval wordt de jumpHandler functie aangeroepen, zodra je op het linkje klikt
@@ -45,7 +46,7 @@ function transformHandler() {
 
 
 // Development animatie click event
-developmentLink.addEventListener('click', shakeHandler)
+developmentLink.addEventListener('dblclick', shakeHandler)
 
 // Shake functie
 function shakeHandler() {
@@ -71,4 +72,14 @@ fixLink.addEventListener('mouseover', textchangeHandler)
 // Text content functie
 function textchangeHandler() {
     document.getElementById("fix").textContent = "Wat?";
+}
+
+
+
+// The animatie click event
+theLink.addEventListener('mouseout', rotateHandler)
+
+// Rotatie animatie functie
+function rotateHandler() {
+    theLink.classList.toggle('rotate')
 }

@@ -174,18 +174,39 @@ a[href="#design"] {
 
 @keyframes focus {
   0% {
+    border-color: white;
     color: white;
   }
   25% {
+    border-color: red;
     color: red;
   }
   50% {
+    border-color: green;
     color: green;
   }
   75% {
+    border-color: blue;
     color: blue;
   }
   100% {
+    border-color: white;
     color: white;
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }
